@@ -1,0 +1,49 @@
+.top-btn,
+.audio-btn {
+	z-index: 2;
+  position: fixed;
+
+	cursor: pointer;
+
+	width: 50px;
+	padding: 10px 0;
+	
+	text-align: center;
+  border-radius: var(--corner-rounding);
+}
+
+.top-btn {
+	display: none;
+	
+	bottom: 40px;
+  right: 40px;
+
+	transition: transform .5s ease-in-out;
+}
+
+.audio-btn {
+	bottom: 40px;
+  right: 40px;
+
+	transition: all ease 1s;
+
+	color: var(--button-audio-text-colour);
+	background-color: var(--button-audio-bg-colour);
+	box-shadow: var(--button-audio-shadow-colour) 0px 4px 0px 0px;
+}
+
+.theme-switch {
+	width: 40px;
+}
+
+/* Different states */
+
+.top-btn:hover {
+	transform: scale(1.1);
+}
+
+.audio-btn:hover {
+	color: var(--button-audio-text-hover-colour);
+	background-color: var(--button-audio-bg-hover-colour);
+	box-shadow: var(--button-audio-shadow-colour) 0px 8px 0px 0px;
+}

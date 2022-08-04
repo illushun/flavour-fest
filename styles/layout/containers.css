@@ -1,0 +1,111 @@
+.page-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+
+	/*background-color: red;*/
+}
+
+.page-container > .top,
+.page-container > .middle,
+.page-container > .bottom {
+	width: 100%;
+	padding: .5em;
+}
+
+.page-columns {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+}
+
+.page-columns > .left,
+.page-columns > .right {
+	width: 100%;
+	padding: 2em;
+}
+
+.page-columns > .left {
+	border-radius: var(--corner-rounding);
+	
+	background-color: var(--column-bg-colour);
+	animation: showLeft 1s cubic-bezier(.74, .06, .4, .92) forwards;
+	/*box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;*/
+}
+
+.page-columns > .right {
+	/*background-color: blue;*/
+}
+
+
+/* For areas which have an image along side text */
+
+
+.dual-reverse-container,
+.dual-container {
+	display: flex;
+
+	width: 100%;
+}
+
+.dual-reverse-container {
+	flex-direction: column-reverse;
+}
+
+.dual-container {
+	flex-direction: column;
+}
+
+.dual-reverse-container > .left,
+.dual-container > .left,
+.dual-reverse-container > .right,
+.dual-container > .right {
+	width: 100%;
+}
+
+.calorie-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+
+	padding: 20px;
+	width: 100%;
+}
+
+.calorie-container > .left,
+.calorie-container > .right {
+	padding: 40px;
+	width: 100%;
+}
+
+.calorie-container > .left {
+
+}
+
+.calorie-container > .right {
+	border-radius: var(--corner-rounding);
+	background-color: var(--card-bg-colour);
+	box-shadow: var(--card-box-shadow);
+}
+
+
+/* Keyframes */
+
+
+@keyframes showLeft {
+  0% {
+    opacity: 0;
+		transform: translate(-500px, 0);
+  }
+  100% {
+    opacity: 100;
+		transform: translate(0, 0);
+  }
+}

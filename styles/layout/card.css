@@ -1,0 +1,134 @@
+.card-container {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.small-card-container,
+.large-card-container {
+	display: flex;
+	overflow: hidden;
+
+	flex-wrap: wrap;
+}
+
+.small-card-container {
+	justify-content: center;
+}
+
+.large-card-container {
+	justify-content: center;
+}
+
+
+/* Change to grid instead of flex? */
+.card-container,
+.card-item,
+.card-box-item {
+	overflow: hidden;
+	
+	display: flex;
+	align-items: center;
+}
+
+.card-item,
+.card-box-item {
+	cursor: pointer;
+	
+	border-radius: var(--corner-rounding);
+	
+	background-color: var(--card-bg-colour);
+	box-shadow: var(--card-box-shadow); /* rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px */
+	/*box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;*/
+}
+
+.card-item {
+	max-height: 200px;
+}
+
+.card-box-item {
+	justify-content: space-around;
+	flex-direction: column;
+
+	min-width: 300px;
+}
+
+.card-box-item > .card-left,
+.card-box-item > .card-right {
+	width: 100%;
+}
+
+.card-left {
+	object-fit: cover;
+	width: 30%;
+}
+
+.card-right {
+	width: 65%;
+	max-height: 200px;
+	padding: 1em;
+}
+
+.card-img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.card-heading {
+	font-weight: bold;
+	margin-bottom: 20px;
+
+	text-align: left;
+	overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1; 
+  -webkit-box-orient: vertical;
+}
+
+.card-body {
+	margin: 0 0 20px 0;
+	padding: 0;
+
+	text-align: left;
+	overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+
+.menu-tags {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.menu-tags > .badge {
+	margin-right: 10px;
+}
+
+#no-items,
+#search-result {
+	display: none;
+}
+
+.card-medium {
+	width: 70%;
+}
+
+.card-large {
+	width: 100%;
+}
+
+.card-xl {
+	width: 100%;
+}
+
+/* Different states */
+
+.card-item:hover,
+.card-box-item:hover {
+	background-color: var(--card-bg-hover-colour);
+}

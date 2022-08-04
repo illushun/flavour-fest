@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <title>Flavour Fest | Japanese</title>
+	
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<!-- CSS -->
+	  <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/a2ecd96a86.js" crossorigin="anonymous"></script>
+	</head>
+	
+	<body onload="loadPagination('menu-item')">
+		<!-- Navigation -->
+		<div class="nav-wrapper" id="navigation-style">
+			<nav class="navbar navbar-expand-sm">
+				<div class="container-fluid">
+					<!-- Logo -->
+					<div class="logo-container mobile-width-80">
+						<a href="../../">
+							<img class="logo-img" id="logo-img" src="../../assets/Logo.png" alt="Logo image" />
+						</a>
+					</div>
+
+					<!-- Hamburger menu for mobile -->
+					<div class="ms-auto">
+				    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+				      <span class="navbar-toggler-icon"></span>
+				    </button>
+					</div>
+	
+					<!-- Nav items -->
+					<div class="collapse navbar-collapse" id="navbar">
+						<ul class="navbar-nav me-auto ms-auto">
+			        <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">About</a>
+							  <ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" href="../../pages/flavour-fest.html">What is Flavour Fest?</a></li>
+									<li><hr class="dropdown-divider" /></li>
+							    <li><a class="dropdown-item mb-none" href="../../pages/explore.html">Explore</a></li>
+							  </ul>
+							</li>
+	
+							<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">Events</a>
+							  <ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" href="../../pages/event-example.html">Coming Soon!</a></li>
+									<li><hr class="dropdown-divider" /></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/event-example.html">Event Example</a></li>
+							  </ul>
+							</li>
+	
+							<!-- Dropdown -->
+			        <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">Food Cultures</a>
+							  <ul class="dropdown-menu">
+							    <li><a class="dropdown-item mb-none" href="../../pages/food-cultures/french.html">French</a></li>
+							    <li><a class="dropdown-item mb-none" href="../../pages/food-cultures/chinese.html">Chinese</a></li>
+									<li><a class="dropdown-item mb-none" href="./japanese.html">Japanese</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/indian.html">Indian</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/italian.html">Italian</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/greek.html">Greek</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/spanish.html">Spanish</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/turkish.html">Turkish</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/thai.html">Thai</a></li>
+							  </ul>
+							</li>
+							
+			        <li class="nav-item">
+			          <a class="nav-link mb-none" href="../../pages/lifestyle.html">Lifestyle</a>
+			        </li>
+							
+			      	<li class="nav-item hide-desktop">
+			          <div class="dropdown">
+								  <button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+								    <i class="fa-solid fa-gear"></i>
+								  </button>
+									
+								  <ul class="dropdown-menu">
+									  <li><a class="dropdown-item mb-none" id="theme-toggle-mobile">Toggle Theme</a></li>
+									  <li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+									</ul>
+								</div>
+			        </li>
+			      </ul>
+					</div>
+
+					<div class="push hide-mobile">
+						<div class="dropdown dropstart">
+							<button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							  <i class="fa-solid fa-gear"></i>
+							</button>
+								
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item mb-none" id="theme-toggle-desktop">Toggle Theme</a></li>
+								<li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<!-- Modal window for settings -->
+		<div class="modal" id="settingsModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <div class="modal-header">
+		        <h4 class="modal-title">Settings</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+
+		      <div class="modal-body">
+						<form>
+							<label><p class="mb-none">Primary Font Name</p></label>
+							<input class="form-control me-2 mb-20" id="font-name" type="text" placeholder="Font name...">
+
+							<label><p class="mb-none">Primary Font Link</p></label>
+							<input class="form-control me-2 mb-40" id="font-url" type="text" placeholder="Font link...">
+
+							<label><p class="mb-none">Secondary Font Name</p></label>
+							<input class="form-control me-2 mb-20" id="secondary-font-name" type="text" placeholder="Font name...">
+
+							<label><p class="mb-none">Secondary Font Link</p></label>
+							<input class="form-control me-2 mb-20" id="secondary-font-url" type="text" placeholder="Font link...">
+						</form>
+		      </div>
+
+		      <div class="modal-footer">
+						<button class="btn btn-tertiary push-right" type="button" onclick="resetSettings()">Reset</button>
+						
+						<button class="btn btn-primary bold" type="button" onclick="saveSettings()">Save</button>
+		        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+		      </div>
+		
+		    </div>
+		  </div>
+		</div>
+		
+		<div class="top-btn btn-secondary" id="top" onclick="scrollToTop()">
+			<i class="fas fa-angle-up"></i>
+		</div>
+		
+		<div class="audio-btn" id="read-screen" onclick="togglePlayIcon()">
+			<i class="fa-solid fa-play" id="play-icon"></i>
+		</div>
+
+		<!-- Modal window for items -->
+		<div class="modal" id="itemModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="item-title">Title</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+
+		      <div class="modal-body">
+						<img class="item-image" src="#" alt="Menu item 1 image" loading="lazy" />
+						<img class="item-image" src="#" alt="Menu item 2 image" loading="lazy" />
+						<img class="item-image" src="#" alt="Menu item 3 image" loading="lazy" />
+						
+						<h3 class="mb-20">Description</h3>
+		        <p id="item-description">Text here...</p>
+
+						<h3 class="mb-20">Ingredients</h3>
+						<p id="item-ingredients">Text here...</p>
+		      </div>
+
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+		      </div>
+		
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Site content -->
+		<div class="page-container flex-column mt-60">
+			<div class="top">
+				<!-- Profile -->
+				<div class="img-display mt-60 mb-40">
+					<img src="../../assets/images/japanese/display.jpg" alt="Japanese display image">		
+				</div>			
+			</div>
+
+			<!-- Food Items -->
+			<div class="middle">
+				<h3 class="mt-60 mb-40 bold">Japanese Food Culture</h3>
+	
+				<p>
+					There is something so unique about Japanese food culture. Every process is like a work of art in itself — from preparation and cooking to the actual eating. There are various things that come into play when dining at an eatery in Japan. And it’s never the same for all types of restaurants. Depending on what they serve, there’s a set of etiquette attached to it.
+				</p>
+	
+				<p class="mb-60">
+					There’s a special term to describe the collective of all Japanese food, and that’s called “washoku” (和食). The characters in Japanese translate to “Food of Japan” — isn’t that beautiful? The art of washoku is blending every ingredient seamlessly with one another to create a magnificent cuisine each time. There’s a sense of harmony between every dish served together. And every course or meal is prepared with the idea of this beautiful tradition in mind. Each bite and sip is another insight to the Japanese way of life.
+				</p>
+
+				<h3 class="mt-60 mb-40">Popular Foods</h3>
+				<p class="text-left mb-40" id="search-result"></p>
+
+				<div class="small-card-container mb-60">
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/japanese/sushi.jpg" alt="Sushi" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Sushi</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/japanese/udon.jpg" alt="Udon" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Udon</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/japanese/tofu.jpg" alt="Tofu" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Tofu</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/japanese/tempura.jpg" alt="Tempura" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Tempura</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/japanese/yakitori.jpg" alt="Yakitori" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Yakitori</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/japanese/sashimi.jpg" alt="Sashimi" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Sashimi</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="mb-40">Restaurant Etiquette</h3>
+	
+				<p class="mb-60">
+					When you enter a restaurant in Japan, the staff will likely all greet you with a hearty "Irasshai!" (Welcome!). In all but the most casual places, where you seat yourself, the waitstaff will next ask you "Nan-mei sama?" (How many people?). Indicate the answer with your fingers, which is what the Japanese do. You may also be asked if you would like to sit at a zashiki (low table on the tatami), at a tēburu (table) or the kauntā (counter). Once seated you will be given an oshibori (hot towel), a cup of tea or water (this is free) and a menu.
+				</p>
+	
+				<h3 class="mb-40">Eating Etiquette</h3>
+	
+				<p>
+					If you only remember one thing, make it this: do not stick your chopsticks upright in a bowl of rice or pass food from one pair of chopsticks to another – both are reminiscent of Japanese funeral rites. But there are other lessons to learn. When serving yourself from a shared dish, it’s polite to use the back end of your chopsticks (i.e. not the end that goes into your mouth) to place the food on your own small dish. Lunch is one of Japan’s great bargains;  however, restaurants can only offer cheap lunch deals because they anticipate high turnover. Spending too long sipping coffee after finishing your meal might earn you dagger eyes from the kitchen.
+				</p>
+	
+				<p class="mb-60">
+					It’s perfectly OK, even expected, to slurp your noodles. They should be eaten at whip speed, before they go soggy (letting them do so would be an affront to the chef); that’s why you’ll hear diners slurping, sucking in air to cool their mouths. Eating and walking at the same time is considered impolite in Japan, as it goes against the etiquette of "ikkai ichi dousa" – which loosely translates as doing "one thing at a time". Finish your onigiri while standing out the front of the convenience store or find somewhere to sit down to eat your bento, otherwise you might elicit some stares of disapproval.
+				</p>
+	
+				<h3 class="mb-40">Focus on Seasonality</h3>
+	
+				<p>
+					The Japanese put an emphasis on “shun” (旬), the seasonality of food. The dishes prepared at a certain time of the year is based on the season it’s in. The flavours introduced fits perfectly for the weather at the point of time.
+				</p>
+	
+				<p class="mb-60">
+					In Shintoism, the current native religion of Japan, it’s important to have respect for nature. The people of Japan take advantage of what is in season, like bamboo shoots in spring and chestnuts in autumn. Everything from “umi no sachi” (海の幸, referring to the fruits of the sea) to “yama no sachi” (山の幸, referring to the fruits of the mountains) is prioritised in to be included in the menu.
+				</p>
+	
+				<h3 class="mb-40">Presentation</h3>
+	
+				<p class="mb-60">
+					In Japanese food culture, how the meal is being served is as important as how it tastes. The people of Japan view the presentation as high importance in any meal they serve and also being served. Everything from bowls to cutlery is carefully placed. Not to mention the actual dish itself. Each ingredient decorates the plate harmoniously, just like their flavours.
+				</p>
+			</div>
+
+			<!-- Special -->
+			<div class="bottom">
+				<h3 class="mb-40">Other Cultures</h3>
+
+				<div class="large-card-container mb-60">
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/turkish.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/turkish/display.jpg" alt="Turkish culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">					
+							<h3 class="card-heading">Turkish</h3>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/french.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/french/display.jpg" alt="French culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">French</h3>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/spanish.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/spanish/display.jpg" alt="Spanish culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Spanish</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer mt-60">
+				<div class="left">
+					<p>
+						Flavour fest is a month-long festival in June 2022 organised and funded by the Inclusive Economy Project and featuring many community-based events and activities in the Park and Warley area. Additionally, it ties in with the vision 2024 project which aims to celebrate diversity and culture in Calderdale maximising opportunities for local people to enjoy, learn and experience a larger life and promoting Park and Warley as a great place to live, work and visit
+					</p>
+				</div>
+
+				<div class="right">
+					<img id="logo-img" src="../../assets/Logo-white.png" alt="Logo image" />
+				</div>
+			</div>
+		
+	  <script src="../../scripts/script.js"></script>
+	</body>
+</html>

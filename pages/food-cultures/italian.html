@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <title>Flavour Fest | Italian</title>
+	
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<!-- CSS -->
+	  <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/a2ecd96a86.js" crossorigin="anonymous"></script>
+	</head>
+	
+	<body onload="loadPagination('menu-item')">
+		<!-- Navigation -->
+		<div class="nav-wrapper" id="navigation-style">
+			<nav class="navbar navbar-expand-sm">
+				<div class="container-fluid">
+					<!-- Logo -->
+					<div class="logo-container mobile-width-80">
+						<a href="../../">
+							<img class="logo-img" id="logo-img" src="../../assets/Logo.png" alt="Logo image" />
+						</a>
+					</div>
+
+					<!-- Hamburger menu for mobile -->
+					<div class="ms-auto">
+				    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+				      <span class="navbar-toggler-icon"></span>
+				    </button>
+					</div>
+	
+					<!-- Nav items -->
+					<div class="collapse navbar-collapse" id="navbar">
+						<ul class="navbar-nav me-auto ms-auto">
+			        <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">About</a>
+							  <ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" href="../../pages/flavour-fest.html">What is Flavour Fest?</a></li>
+									<li><hr class="dropdown-divider" /></li>
+							    <li><a class="dropdown-item mb-none" href="../../pages/explore.html">Explore</a></li>
+							  </ul>
+							</li>
+	
+							<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">Events</a>
+							  <ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" href="../../pages/event-example.html">Coming Soon!</a></li>
+									<li><hr class="dropdown-divider" /></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/event-example.html">Event Example</a></li>
+							  </ul>
+							</li>
+	
+							<!-- Dropdown -->
+			        <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">Food Cultures</a>
+							  <ul class="dropdown-menu">
+							    <li><a class="dropdown-item mb-none" href="../../pages/food-cultures/french.html">French</a></li>
+							    <li><a class="dropdown-item mb-none" href="../../pages/food-cultures/chinese.html">Chinese</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/japanese.html">Japanese</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/indian.html">Indian</a></li>
+									<li><a class="dropdown-item mb-none" href="./italian.html">Italian</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/greek.html">Greek</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/spanish.html">Spanish</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/turkish.html">Turkish</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/thai.html">Thai</a></li>
+							  </ul>
+							</li>
+							
+			        <li class="nav-item">
+			          <a class="nav-link mb-none" href="../../pages/lifestyle.html">Lifestyle</a>
+			        </li>
+							
+			      	<li class="nav-item hide-desktop">
+			          <div class="dropdown">
+								  <button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+								    <i class="fa-solid fa-gear"></i>
+								  </button>
+									
+								  <ul class="dropdown-menu">
+									  <li><a class="dropdown-item mb-none" id="theme-toggle-mobile">Toggle Theme</a></li>
+									  <li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+									</ul>
+								</div>
+			        </li>
+			      </ul>
+					</div>
+
+					<div class="push hide-mobile">
+						<div class="dropdown dropstart">
+							<button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							  <i class="fa-solid fa-gear"></i>
+							</button>
+								
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item mb-none" id="theme-toggle-desktop">Toggle Theme</a></li>
+								<li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<!-- Modal window for settings -->
+		<div class="modal" id="settingsModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <div class="modal-header">
+		        <h4 class="modal-title">Settings</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+
+		      <div class="modal-body">
+						<form>
+							<label><p class="mb-none">Primary Font Name</p></label>
+							<input class="form-control me-2 mb-20" id="font-name" type="text" placeholder="Font name...">
+
+							<label><p class="mb-none">Primary Font Link</p></label>
+							<input class="form-control me-2 mb-40" id="font-url" type="text" placeholder="Font link...">
+
+							<label><p class="mb-none">Secondary Font Name</p></label>
+							<input class="form-control me-2 mb-20" id="secondary-font-name" type="text" placeholder="Font name...">
+
+							<label><p class="mb-none">Secondary Font Link</p></label>
+							<input class="form-control me-2 mb-20" id="secondary-font-url" type="text" placeholder="Font link...">
+						</form>
+		      </div>
+
+		      <div class="modal-footer">
+						<button class="btn btn-tertiary push-right" type="button" onclick="resetSettings()">Reset</button>
+						
+						<button class="btn btn-primary bold" type="button" onclick="saveSettings()">Save</button>
+		        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+		      </div>
+		
+		    </div>
+		  </div>
+		</div>
+
+		<div class="top-btn btn-secondary" id="top" onclick="scrollToTop()">
+			<i class="fas fa-angle-up"></i>
+		</div>
+		
+		<div class="audio-btn" id="read-screen" onclick="togglePlayIcon()">
+			<i class="fa-solid fa-play" id="play-icon"></i>
+		</div>
+
+		<!-- Modal window for items -->
+		<div class="modal" id="itemModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="item-title">Title</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+
+		      <div class="modal-body">
+						<img class="item-image" src="#" alt="Menu item 1 image" loading="lazy" />
+						<img class="item-image" src="#" alt="Menu item 2 image" loading="lazy" />
+						<img class="item-image" src="#" alt="Menu item 3 image" loading="lazy" />
+						
+						<h3 class="mb-20">Description</h3>
+		        <p id="item-description">Text here...</p>
+
+						<h3 class="mb-20">Ingredients</h3>
+						<p id="item-ingredients">Text here...</p>
+		      </div>
+
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+		      </div>
+		
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Site content -->
+		<div class="page-container flex-column mt-60">
+			<div class="top">
+				<!-- Profile -->
+				<div class="img-display mt-60 mb-40">
+					<img src="../../assets/images/italian/display.jpg" alt="Italian display image">		
+				</div>		
+			</div>
+
+			<!-- Food Items -->
+			<div class="middle">
+				<h3 class="mt-60 mb-40 bold">Italian Food Culture</h3>
+	
+				<p>
+					The Italian culture has a very rich tradition in food, arts, music, literature. The list goes on. Italian food is considered one of the best food palates in the world. It is full of flavor that will surely tantalize your taste buds which you will surely enjoy.
+				</p>
+	
+				<p class="mb-60">
+					Italian food culture has influenced a lot of countries already. It is known to captivate the taste buds of so many people from different cultures around the world. Thus, these people adopted what they liked about Italian food and added locally grown ingredients and incorporated them into their own traditional dishes, and made them their own.
+				</p>
+
+				<h3 class="mt-60 mb-40">Popular Foods</h3>
+				<p class="text-left mb-40" id="search-result"></p>
+
+				<div class="small-card-container mb-60">
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/italian/arancini.jpeg" alt="Arancini" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Arancini</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/italian/lasagne.jpg" alt="Lasagne" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Lasagne</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/italian/ribollita.jpeg" alt="Ribollita" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Ribollita</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/italian/saltimbocca.jpeg" alt="Saltimbocca" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Saltimbocca</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/italian/gelato.jpg" alt="Gelato" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Gelato</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/italian/torrone.jpeg" alt="Torrone" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Torrone</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="mb-40">All Fresh Ingredients</h3>
+	
+				<p>
+					Once you’ve seen an Italian chef or home cook create an Italian dish, you will automatically notice that the ingredients used in cooking are nothing but fresh. The Italian food culture focuses more on choosing fresh, quality ingredients than on intricate preparations.
+				</p>
+	
+				<p class="mb-60">
+					Italy is a pretty diverse country and every region offers different fresh produce that makes it readily available throughout Italy. From fresh eggs to oil, vegetables, meat, fish, herbs, and cheeses, Italian food is all about the freshness of all the ingredients they put into their dishes.
+				</p>
+	
+				<h3 class="mb-40">Tradition</h3>
+	
+				<p>
+					Italy has a rich tradition. Each region boasted its own dishes where they carefully incorporated their respective traditions. Contrary to what most people from other parts of the world might have thought, no place in Italy eats the same dish as the next.
+				</p>
+	
+				<p class="mb-60">
+					In the north of Italy, for instance, people in this region cook more meat, potatoes, and rice than their neighboring areas. The very popular Italian dishes like pizza and pasta are more local in the central part of Italy. While in the South, their dishes are usually cooked with fresh tomatoes and fresh fish. For example, Sicily has been occupied by many different cultures and has influenced their cooking styles significantly. Almonds, couscous, and tomatoes are only a few items brought to the island by their occupiers.
+				</p>
+	
+				<h3 class="mb-40">Keeping it Fresh</h3>
+	
+				<p>
+					When it comes to buying food in Italy, it's a common trend to choose local markets and stores as opposed to larger-scale supermarkets. The big advantage of the market is that it offers home-grown and fresh produce that's both healthy and delicious in equal measures.
+				</p>
+	
+				<p class="mb-60">
+					A recent report from Euromonitor International has said that Italians are continuing to love their fresh food. 2014 saw a period of recovery after a recent slump as a result of the global economic crisis. The report said that 2014 had seen a greater upswing in traditional consumption in Italy with more home cooking and baking.
+				</p>
+	
+				<h3 class="mb-40">Simplicity</h3>
+	
+				<p>
+					Italian cuisines are more attentive to how fresh their ingredients are and not the recipe’s complexity. Typical Italian food only requires a few ingredients to create and this is what makes Italians amazing.
+				</p>
+	
+				<p class="mb-60">
+					They can do a lot of wonders with such little ingredients and no one will ever notice. This is how talented they are when it comes to crafting a dish. Cooking is considered a work of art or craft by most Italian and almost everyone in Italy knows how to cook.
+				</p>
+			</div>
+
+			<!-- Special -->
+			<div class="bottom">
+				<h3 class="mb-40">Other Cultures</h3>
+
+				<div class="large-card-container mb-60">
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/turkish.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/turkish/display.jpg" alt="Turkish culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">					
+							<h3 class="card-heading">Turkish</h3>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/french.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/french/display.jpg" alt="French culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">French</h3>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/spanish.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/spanish/display.jpg" alt="Spanish culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Spanish</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer mt-60">
+				<div class="left">
+					<p>
+						Flavour fest is a month-long festival in June 2022 organised and funded by the Inclusive Economy Project and featuring many community-based events and activities in the Park and Warley area. Additionally, it ties in with the vision 2024 project which aims to celebrate diversity and culture in Calderdale maximising opportunities for local people to enjoy, learn and experience a larger life and promoting Park and Warley as a great place to live, work and visit
+					</p>
+				</div>
+
+				<div class="right">
+					<img id="logo-img" src="../../assets/Logo-white.png" alt="Logo image" />
+				</div>
+			</div>
+		
+	  <script src="../../scripts/script.js"></script>
+	</body>
+</html>

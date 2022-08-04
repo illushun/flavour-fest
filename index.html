@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Flavour Fest</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- CSS -->
+	<link href="./styles/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/a2ecd96a86.js" crossorigin="anonymous"></script>
+
+	<!-- Custom Fonts -->
+	<link id="primary-font-link" href="" rel="stylesheet">
+	<link id="secondary-font-link" href="" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="nav-wrapper" id="navigation-style">
+		<nav class="navbar navbar-expand-sm">
+			<div class="container-fluid">
+				<!-- Logo -->
+				<div class="logo-container mobile-width-80">
+					<a href="./">
+						<img class="logo-img" id="logo-img" src="./assets/Logo.png" alt="Logo image" />
+					</a>
+				</div>
+
+				<!-- Hamburger menu for mobile -->
+				<div class="ms-auto">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+
+				<!-- Nav items -->
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="navbar-nav me-auto ms-auto">
+						<!-- Dropdown -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle mb-none" href="#" role="button"
+								data-bs-toggle="dropdown">About</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item mb-none" href="./pages/flavour-fest.html">What is Flavour
+										Fest?</a></li>
+								<li>
+									<hr class="dropdown-divider" />
+								</li>
+								<li><a class="dropdown-item mb-none" href="./pages/explore.html">Explore</a></li>
+							</ul>
+						</li>
+
+						<!-- Dropdown -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle mb-none" href="#" role="button"
+								data-bs-toggle="dropdown">Events</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item mb-none" href="./pages/event-example.html">Coming Soon!</a>
+								</li>
+								<li>
+									<hr class="dropdown-divider" />
+								</li>
+								<li><a class="dropdown-item mb-none" href="./pages/event-example.html">Event Example</a>
+								</li>
+							</ul>
+						</li>
+
+						<!-- Dropdown -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle mb-none" href="#" role="button"
+								data-bs-toggle="dropdown">Food Cultures</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item mb-none" href="./pages/food-cultures/french.html">French</a>
+								</li>
+								<li><a class="dropdown-item mb-none"
+										href="./pages/food-cultures/chinese.html">Chinese</a></li>
+								<li><a class="dropdown-item mb-none"
+										href="./pages/food-cultures/japanese.html">Japanese</a></li>
+								<li><a class="dropdown-item mb-none" href="./pages/food-cultures/indian.html">Indian</a>
+								</li>
+								<li><a class="dropdown-item mb-none"
+										href="./pages/food-cultures/italian.html">Italian</a></li>
+								<li><a class="dropdown-item mb-none" href="./pages/food-cultures/greek.html">Greek</a>
+								</li>
+								<li><a class="dropdown-item mb-none"
+										href="./pages/food-cultures/spanish.html">Spanish</a></li>
+								<li><a class="dropdown-item mb-none"
+										href="./pages/food-cultures/turkish.html">Turkish</a></li>
+								<li><a class="dropdown-item mb-none" href="./pages/food-cultures/thai.html">Thai</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link mb-none" href="./pages/lifestyle.html">Lifestyle</a>
+						</li>
+
+						<!-- Theme toggle for mobile -->
+						<li class="nav-item hide-desktop">
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown"
+									type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+									aria-expanded="false">
+									<i class="fa-solid fa-gear"></i>
+								</button>
+
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" id="theme-toggle-mobile">Toggle Theme</a></li>
+									<li><a class="dropdown-item mb-none" data-bs-toggle="modal"
+											data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Theme toggle for desktop -->
+				<div class="push hide-mobile">
+					<div class="dropdown dropstart">
+						<button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button"
+							id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							<i class="fa-solid fa-gear"></i>
+						</button>
+
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item mb-none" id="theme-toggle-desktop">Toggle Theme</a></li>
+							<li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal"
+									onclick="loadSettings()">Settings</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<!-- Modal window for settings -->
+	<div class="modal" id="settingsModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title">Settings</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body">
+					<form>
+						<label>
+							<p class="mb-none">Primary Font Name</p>
+						</label>
+						<input class="form-control me-2 mb-20" id="font-name" type="text" placeholder="Font name...">
+
+						<label>
+							<p class="mb-none">Primary Font Link</p>
+						</label>
+						<input class="form-control me-2 mb-40" id="font-url" type="text" placeholder="Font link...">
+
+						<label>
+							<p class="mb-none">Secondary Font Name</p>
+						</label>
+						<input class="form-control me-2 mb-20" id="secondary-font-name" type="text"
+							placeholder="Font name...">
+
+						<label>
+							<p class="mb-none">Secondary Font Link</p>
+						</label>
+						<input class="form-control me-2 mb-20" id="secondary-font-url" type="text"
+							placeholder="Font link...">
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-tertiary push-right" type="button" onclick="resetSettings()">Reset</button>
+
+					<button class="btn btn-primary bold" type="button" onclick="saveSettings()">Save</button>
+					<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Scroll to top button -->
+	<div class="top-btn btn-secondary" id="top" onclick="scrollToTop()">
+		<i class="fas fa-angle-up"></i>
+	</div>
+
+	<!-- Screen reader button -->
+	<div class="audio-btn" id="read-screen" onclick="togglePlayIcon()">
+		<i class="fa-solid fa-play" id="play-icon"></i>
+	</div>
+
+	<!-- Site content -->
+	<div class="page-container mt-60">
+		<!-- Top of page content -->
+		<div class="page-columns mt-20 mb-60">
+			<div class="left">
+				<h2 class="mb-20 bold">Flavourfest 2022</h2>
+				<h3 class="mb-40">Explore, Discover, Experience</h3>
+
+				<p class="mb-40">
+					Flavourfest is a month-long celebration of culture and diversity this June in one of the most
+					vibrant and distinctive places in Calderdale.
+					<br><br>
+					The festival programme includes events and activities across the Calderdale wards of Park and Warley
+					(also known asWest Central Halifax) for people to enjoy, learn and experience a larger life.
+				</p>
+
+				<button class="btn btn-primary bold width-100 pad-10" type="button"
+					onclick="location.href='./pages/flavour-fest.html'">Get Started</button>
+			</div>
+
+			<div class="right hide-mobile">
+				<img src="./assets/images/landing-image.png" alt="Landing page image, family cooking food." />
+			</div>
+		</div>
+
+		<!-- Middle of page content -->
+		<div class="middle">
+			<h3 class="mb-40">Upcoming Events</h3>
+
+			<div class="small-card-container mb-60">
+				<div class="card-box-item mb-20 card-medium" onclick="location.href='./pages/event-example.html'">
+					<div class="card-left">
+						<img class="card-img large-card" src="./assets/images/wrap.jpg" alt="Watch a chef image"
+							loading="lazy" />
+					</div>
+
+					<div class="card-right">
+						<h3 class="card-heading">Watch a Chef</h3>
+					</div>
+				</div>
+
+				<div class="card-box-item mb-20 card-medium" onclick="location.href='./pages/event-example.html'">
+					<div class="card-left">
+						<img class="card-img large-card" src="./assets/images/drive_in_cinema.png"
+							alt="Drive in cinema image" loading="lazy" />
+					</div>
+
+					<div class="card-right">
+						<h3 class="card-heading">Drive in Cinema</h3>
+					</div>
+				</div>
+
+				<div class="card-box-item mb-20 card-medium" onclick="location.href='./pages/event-example.html'">
+					<div class="card-left">
+						<img class="card-img large-card" src="./assets/images/live_music.jpg" alt="Live music image"
+							loading="lazy" />
+					</div>
+
+					<div class="card-right">
+						<h3 class="card-heading">Live Music</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bottom of page content -->
+		<div class="bottom">
+			<h3 class="mb-40">Explore Cultures</h3>
+
+			<div class="large-card-container mb-60">
+				<div class="card-box-item mb-20 card-xl" onclick="location.href='./pages/food-cultures/turkish.html'">
+					<div class="card-left">
+						<img class="card-img large-card" src="./assets/images/turkish/display.jpg"
+							alt="Turkish culture display image" loading="lazy" />
+					</div>
+
+					<div class="card-right">
+						<h3 class="card-heading">Turkish</h3>
+					</div>
+				</div>
+
+				<div class="card-box-item mb-20 card-xl" onclick="location.href='./pages/food-cultures/french.html'">
+					<div class="card-left">
+						<img class="card-img large-card" src="./assets/images/french/display.jpg"
+							alt="French culture display image" loading="lazy" />
+					</div>
+
+					<div class="card-right">
+						<h3 class="card-heading">French</h3>
+					</div>
+				</div>
+
+				<div class="card-box-item mb-20 card-xl" onclick="location.href='./pages/food-cultures/spanish.html'">
+					<div class="card-left">
+						<img class="card-img large-card" src="./assets/images/spanish/display.jpg"
+							alt="Spanish culture display image" loading="lazy" />
+					</div>
+
+					<div class="card-right">
+						<h3 class="card-heading">Spanish</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="footer mt-60">
+			<div class="left">
+				<p>
+					Flavour fest is a month-long festival in June 2022 organised and funded by the Inclusive Economy
+					Project and featuring many community-based events and activities in the Park and Warley area.
+					Additionally, it ties in with the vision 2024 project which aims to celebrate diversity and culture
+					in Calderdale maximising opportunities for local people to enjoy, learn and experience a larger life
+					and promoting Park and Warley as a great place to live, work and visit
+				</p>
+			</div>
+
+			<div class="right">
+				<img id="logo-img" src="./assets/Logo-white.png" alt="Logo image" />
+			</div>
+		</div>
+	</div>
+
+	<script src="./scripts/script.js"></script>
+</body>
+
+</html>

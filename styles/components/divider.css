@@ -1,0 +1,7 @@
+hr {
+	border: 1px solid var(--hr-colour);
+}
+
+hr:hover {
+	border: 1px solid var(--hr-hover-colour);
+}

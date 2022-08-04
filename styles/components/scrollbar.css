@@ -1,0 +1,28 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-grab-colour) var(--scrollbar-bg-colour);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg-colour); 
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-grab-colour); 
+  border-radius: 20px; 
+  border: 3px solid var(--scrollbar-bg-colour);
+}
+
+/* Different states */
+
+*::-webkit-scrollbar-track:hover {
+  background: var(--scrollbar-bg-hover-colour); 
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-grab-hover-colour); 
+}

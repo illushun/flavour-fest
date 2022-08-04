@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <title>Flavour Fest | Chinese</title>
+	
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<!-- CSS -->
+	  <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/a2ecd96a86.js" crossorigin="anonymous"></script>
+	</head>
+	
+	<body onload="loadPagination('menu-item')">
+		<!-- Navigation -->
+		<div class="nav-wrapper" id="navigation-style">
+			<nav class="navbar navbar-expand-sm">
+				<div class="container-fluid">
+					<!-- Logo -->
+					<div class="logo-container mobile-width-80">
+						<a href="../../">
+							<img class="logo-img" id="logo-img" src="../../assets/Logo.png" alt="Logo image" />
+						</a>
+					</div>
+
+					<!-- Hamburger menu for mobile -->
+					<div class="ms-auto">
+				    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+				      <span class="navbar-toggler-icon"></span>
+				    </button>
+					</div>
+	
+					<!-- Nav items -->
+					<div class="collapse navbar-collapse" id="navbar">
+						<ul class="navbar-nav me-auto ms-auto">
+			        <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">About</a>
+							  <ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" href="../../pages/flavour-fest.html">What is Flavour Fest?</a></li>
+									<li><hr class="dropdown-divider" /></li>
+							    <li><a class="dropdown-item mb-none" href="../../pages/explore.html">Explore</a></li>
+							  </ul>
+							</li>
+	
+							<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">Events</a>
+							  <ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" href="../../pages/event-example.html">Coming Soon!</a></li>
+									<li><hr class="dropdown-divider" /></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/event-example.html">Event Example</a></li>
+							  </ul>
+							</li>
+	
+							<!-- Dropdown -->
+			        <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">Food Cultures</a>
+							  <ul class="dropdown-menu">
+							    <li><a class="dropdown-item mb-none" href="../../pages/food-cultures/french.html">French</a></li>
+							    <li><a class="dropdown-item mb-none" href="./chinese.html">Chinese</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/japanese.html">Japanese</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/indian.html">Indian</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/italian.html">Italian</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/greek.html">Greek</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/spanish.html">Spanish</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/turkish.html">Turkish</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/thai.html">Thai</a></li>
+							  </ul>
+							</li>
+							
+			        <li class="nav-item">
+			          <a class="nav-link mb-none" href="../../pages/lifestyle.html">Lifestyle</a>
+			        </li>
+							
+			      	<li class="nav-item hide-desktop">
+			          <div class="dropdown">
+								  <button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+								    <i class="fa-solid fa-gear"></i>
+								  </button>
+									
+								  <ul class="dropdown-menu">
+									  <li><a class="dropdown-item mb-none" id="theme-toggle-mobile">Toggle Theme</a></li>
+									  <li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+									</ul>
+								</div>
+			        </li>
+			      </ul>
+					</div>
+
+					<div class="push hide-mobile">
+						<div class="dropdown dropstart">
+							<button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							  <i class="fa-solid fa-gear"></i>
+							</button>
+								
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item mb-none" id="theme-toggle-desktop">Toggle Theme</a></li>
+								<li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<!-- Modal window for settings -->
+		<div class="modal" id="settingsModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <div class="modal-header">
+		        <h4 class="modal-title">Settings</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+
+		      <div class="modal-body">
+						<form>
+							<label><p class="mb-none">Primary Font Name</p></label>
+							<input class="form-control me-2 mb-20" id="font-name" type="text" placeholder="Font name...">
+
+							<label><p class="mb-none">Primary Font Link</p></label>
+							<input class="form-control me-2 mb-40" id="font-url" type="text" placeholder="Font link...">
+
+							<label><p class="mb-none">Secondary Font Name</p></label>
+							<input class="form-control me-2 mb-20" id="secondary-font-name" type="text" placeholder="Font name...">
+
+							<label><p class="mb-none">Secondary Font Link</p></label>
+							<input class="form-control me-2 mb-20" id="secondary-font-url" type="text" placeholder="Font link...">
+						</form>
+		      </div>
+
+		      <div class="modal-footer">
+						<button class="btn btn-tertiary push-right" type="button" onclick="resetSettings()">Reset</button>
+						
+						<button class="btn btn-primary bold" type="button" onclick="saveSettings()">Save</button>
+		        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+		      </div>
+		
+		    </div>
+		  </div>
+		</div>
+
+		<div class="top-btn btn-secondary" id="top" onclick="scrollToTop()">
+			<i class="fas fa-angle-up"></i>
+		</div>
+		
+		<div class="audio-btn" id="read-screen" onclick="togglePlayIcon()">
+			<i class="fa-solid fa-play" id="play-icon"></i>
+		</div>
+
+		<!-- Modal window for items -->
+		<div class="modal" id="itemModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="item-title">Title</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+
+		      <div class="modal-body">
+						<img class="item-image" src="#" alt="Menu item 1 image" loading="lazy" />
+						<img class="item-image" src="#" alt="Menu item 2 image" loading="lazy" />
+						<img class="item-image" src="#" alt="Menu item 3 image" loading="lazy" />
+						
+						<h3 class="mb-20">Description</h3>
+		        <p id="item-description">Text here...</p>
+
+						<h3 class="mb-20">Ingredients</h3>
+						<p id="item-ingredients">Text here...</p>
+		      </div>
+
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+		      </div>
+		
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Site content -->
+		<div class="page-container flex-column mt-60">
+			<div class="top">
+				<!-- Profile -->
+				<div class="img-display mt-60 mb-40">
+					<img src="../../assets/images/chinese/display.jpeg" alt="Chinese display image">		
+				</div>		
+			</div>
+
+			<!-- Food Items -->
+			<div class="middle">
+				<h3 class="mt-60 mb-40 bold">Chinese Food Culture</h3>
+	
+				<p class="mb-60">
+					Chinese food history is as long as Chinese history. In the long period of 					development, many delicious food keep popping up and many are still 								enjoyed today. Among them, some are festival foods more frequently eaten 						on special festivals while some are eaten commonly in everyday life. 
+					In Chinese society, people usually treat others with meals in order to 							make new friends or enhance established relationships. Cantonese 										breakfast is known as morning tea and lots of people talk about business 						and exchange information while having morning tea together.
+				</p>
+
+				<h3 class="mt-60 mb-40">Popular Foods</h3>
+				<p class="text-left mb-40" id="search-result"></p>
+
+				<div class="small-card-container mb-60">
+					<div class="card-box-item mb-20 card-medium" data-bs-toggle="modal" data-bs-target="#itemModal" onclick="getItemRecipe('company_1')">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/chinese/peking-roasted-duck.jpeg" alt="Peking roasted duck" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Roasted Duck</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium" data-bs-toggle="modal" data-bs-target="#itemModal" onclick="getItemRecipe('company_2')">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/chinese/kung-pao-chicken.jpeg" alt="Kung pao chicken" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading text-left">Kung Pao Chicken</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium" data-bs-toggle="modal" data-bs-target="#itemModal" onclick="getItemRecipe('company_3')">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/chinese/sweet-and-sour-pork.jpeg" alt="Sweet and sour pork" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Sweet & Sour Pork</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium" data-bs-toggle="modal" data-bs-target="#itemModal" onclick="getItemRecipe('company_1')">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/chinese/hot-pot.jpeg" alt="Hot pot" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Hot Pot</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium" data-bs-toggle="modal" data-bs-target="#itemModal" onclick="getItemRecipe('company_2')">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/chinese/dim-sum.jpeg" alt="Dim sum" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Dim Sum</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium" data-bs-toggle="modal" data-bs-target="#itemModal" onclick="getItemRecipe('company_3')">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/chinese/dumplings.jpeg" alt="Dumplings" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Dumplings</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="mb-40">Varied Flavors</h3>
+	
+				<p class="mb-60">
+					China has a vast territory and abundant resources, and each region has different climate, natural products and folk customs. After a long time, different region has formed its own food flavors. For example, people in southern China take rice as staple food, while people from northern China are used to eat noodles or steamed buns as staple food. As for the flavor, the whole country can be generally divided into four parts: sweet south, salt north, sour east and spicy west.
+				</p>
+	
+				<h3 class="mb-40">Different dishes in different seasons</h3>
+	
+				<p class="mb-60">
+					Chinese people will change their menus as the switch of each season, from the raw materials to the cooking methods, each season uses different seasonings and accompany dishes. Winter has a thicker and rich flavor, while summer features in light and cool flavor; cuisines in winter are most braised or stewed, while in summer, they are mostly served as cold and dressed with sauce.
+				</p>
+	
+				<h3 class="mb-40">Aesthetic sense</h3>
+	
+				<p class="mb-60">
+					Chinese cuisine puts great importance on the aesthetic sense of the dish, and pursues the harmony in color, aroma, taste, shape and utensil. The aesthetic sense of the cuisine can be expressed from multiple aspects. No matter the raw material is Chinese cabbage or carrot, they can all be cut into different shapes to match the whole dish, which gives people a highly unified mental and physical enjoyment.
+				</p>
+	
+				<h3 class="mb-40">Combining Food and Chinese Medicine</h3>
+	
+				<p class="mb-60">
+					Chinese people believe that except providing nutrition to the body, food can also cure disease. When you are not serious ill, you can cure your disease by eating the right food, only after the food doesn’t work, you may turn to the medicine. Medicine is believed to have some toxicity more or less, thus, food is a safer way to maintain health and cure disease (sadly to say, it works slower).
+				</p>
+			</div>
+
+			<!-- Special -->
+			<div class="bottom">
+				<h3 class="mb-40">Other Cultures</h3>
+
+				<div class="large-card-container mb-60">
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/turkish.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/turkish/display.jpg" alt="Turkish culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">					
+							<h3 class="card-heading">Turkish</h3>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/french.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/french/display.jpg" alt="French culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">French</h3>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/spanish.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/spanish/display.jpg" alt="Spanish culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Spanish</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer mt-60">
+				<div class="left">
+					<p>
+						Flavour fest is a month-long festival in June 2022 organised and funded by the Inclusive Economy Project and featuring many community-based events and activities in the Park and Warley area. Additionally, it ties in with the vision 2024 project which aims to celebrate diversity and culture in Calderdale maximising opportunities for local people to enjoy, learn and experience a larger life and promoting Park and Warley as a great place to live, work and visit
+					</p>
+				</div>
+
+				<div class="right">
+					<img id="logo-img" src="../../assets/Logo-white.png" alt="Logo image" />
+				</div>
+			</div>
+		
+	  <script src="../../scripts/script.js"></script>
+		<script src="../../scripts/recipe.js"></script>
+	</body>
+</html>

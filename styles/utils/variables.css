@@ -1,0 +1,252 @@
+/* 
+ *	Referencing a variable in css:
+ *	element: var(--variable-name);
+ */
+
+:root {
+	  /* fonts */
+    --fs-xl: 6rem;
+    --fs-medium: 2.1rem;
+    --fs-small: 1.3rem;
+  
+    --font-primary: "Inter", sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+
+		--primary-font-url: "";
+		--secondary-font-url: "";
+  
+    /* extra */
+    --corner-rounding: 5px;
+    --header-margin: 30px;
+    --paragraph-margin: 5px;
+
+		/* colours */
+		--window-bg-colour: hsl(0, 0%, 100%);
+
+		--font-h1-colour: hsl(215, 55%, 21%);
+		--font-h2-colour: hsl(215, 55%, 21%);
+		--font-h3-colour: hsl(215, 55%, 21%);
+		--font-h4-colour: hsl(215, 55%, 21%);
+		--font-h5-colour: hsl(215, 55%, 21%);
+		--font-h6-colour: hsl(215, 55%, 21%);
+		--font-paragraph-colour: hsl(221, 21%, 40%);
+		--font-link-colour: hsl(221, 21%, 40%);
+
+		--navigation-bg-colour: hsl(0, 0%, 100%);
+		--navigation-logo-colour: hsl(215, 55%, 21%);
+		--navigation-logo-hover-colour: hsl(215, 55%, 21%);
+		--navigation-link-colour: hsl(220, 14%, 43%);
+		--navigation-link-hover-colour: hsl(88, 75%, 40%);
+		--navigation-link-active-colour: hsl(88, 75%, 40%);
+		--navigation-link-focus-colour: hsl(88, 75%, 40%);
+		--navigation-link-selected-colour: hsl(215, 55%, 21%);
+
+		--button-primary-text-colour: hsl(88, 75%, 20%);
+		--button-primary-text-hover-colour: hsl(88, 75%, 20%);
+		--button-primary-text-focus-color: hsl(88, 75%, 20%);
+		--button-primary-text-disabled-color: hsl(227, 13%, 79%);
+		--button-primary-bg-colour: linear-gradient(92.88deg, hsl(88, 75%, 61%) 9.16%, hsl(88, 75%, 50%) 43.89%, hsl(88, 75%, 61%) 64.72%);
+		--button-primary-bg-hover-colour: linear-gradient(92.88deg, hsl(88, 75%, 61%) 9.16%, hsl(88, 75%, 50%) 43.89%, hsl(88, 75%, 61%) 64.72%);
+		--button-primary-bg-focus-colour: linear-gradient(92.88deg, hsl(88, 75%, 61%) 9.16%, hsl(88, 75%, 50%) 43.89%, hsl(88, 75%, 61%) 64.72%);
+		--button-primary-bg-disabled-colour: linear-gradient(92.88deg, hsl(0, 0%, 90%) 9.16%, hsl(0, 0%, 90%) 43.89%, hsl(0, 0%, 90%) 64.72%);
+		--button-primary-border-colour: white;
+		--button-primary-border-hover-colour: hsl(88, 75%, 61%);
+		--button-primary-border-focus-colour: hsl(88, 75%, 61%);
+		--button-primary-border-disabled-colour: hsl(227, 13%, 89%);
+		--button-secondary-text-colour: hsl(215, 55%, 21%);
+		--button-secondary-text-hover-colour: hsl(215, 55%, 21%);
+		--button-secondary-text-focus-colour: hsl(215, 55%, 21%);
+		--button-secondary-text-disabled-colour: hsl(227, 13%, 79%);
+		--button-secondary-bg-colour: hsl(0, 0%, 100%);
+		--button-secondary-bg-hover-colour: hsl(0, 0%, 100%);
+		--button-secondary-bg-focus-colour: hsl(0, 0%, 90%);
+		--button-secondary-bg-disabled-colour: hsl(0, 0%, 90%);
+		--button-secondary-border-colour: hsl(227, 13%, 79%);
+		--button-secondary-border-hover-colour: hsl(227, 13%, 79%);
+		--button-secondary-border-focus-colour: hsl(227, 13%, 79%);
+		--button-secondary-border-disabled-colour: hsl(227, 13%, 89%);
+		--button-tertiary-text-colour: hsl(88, 75%, 61%);
+		--button-tertiary-text-hover-colour: hsl(88, 75%, 61%);
+		--button-tertiary-text-focus-colour: hsl(88, 75%, 41%);
+		--button-tertiary-bg-colour: transparent;
+		--button-tertiary-bg-hover-colour: transparent;
+		--button-tertiary-bg-focus-colour: transparent;
+		--button-audio-text-colour: hsl(88, 75%, 20%);
+		--button-audio-text-hover-colour: hsl(88, 75%, 20%);
+		--button-audio-bg-colour: hsl(88, 75%, 61%);
+		--button-audio-bg-hover-colour: hsl(88, 75%, 61%);
+		--button-audio-shadow-colour: hsl(88, 75%, 31%);
+
+		--dropdown-menu-bg-colour: hsl(0, 0%, 100%);
+		--dropdown-menu-bg-hover-colour: hsl(0, 0%, 100%);
+		--dropdown-menu-bg-focus-colour: hsl(0, 0%, 100%);
+		--dropdown-menu-border-colour: hsl(0, 0%, 70%);
+		--dropdown-divider-colour: hsl(0, 0%, 50%);
+		--dropdown-item-bg-colour: transparent;
+		--dropdown-item-bg-hover-colour: hsl(88, 75%, 61%);
+		--dropdown-item-bg-focus-colour: hsl(88, 75%, 61%);
+		--dropdown-item-bg-active-colour: hsl(88, 75%, 20%);
+		--dropdown-item-bg-active-hover-colour: hsl(88, 75%, 30%);
+		--dropdown-item-text-colour: hsl(220, 14%, 43%);
+		--dropdown-item-text-hover-colour: hsl(88, 75%, 20%);
+		--dropdown-item-text-focus-colour: hsl(88, 75%, 20%);
+		--dropdown-item-text-active-colour: hsl(0, 0%, 100%);
+		--dropdown-item-text-active-hover-colour: hsl(0, 0%, 100%);
+
+		--scrollbar-bg-colour: hsl(0, 0%, 100%);
+		--scrollbar-bg-hover-colour: hsl(0, 0%, 90%);
+		--scrollbar-grab-colour: hsl(88, 75%, 61%);
+		--scrollbar-grab-hover-colour: hsl(88, 75%, 50%);
+
+		--hr-colour: hsl(0, 0%, 70%);
+		--hr-hover-colour: hsl(0, 0%, 70%);
+
+		--card-bg-colour: hsl(0, 0%, 100%);
+		--card-bg-hover-colour: hsl(0, 0%, 100%);
+		--card-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+		--column-bg-colour: hsl(0, 0%, 100%);
+
+		--input-bg-colour: hsl(0, 0%, 100%);
+		--input-bg-hover-colour: hsl(0, 0%, 90%);
+		--input-bg-focus-colour: hsl(0, 0%, 90%);
+		--input-text-colour: hsl(220, 14%, 43%);
+		--input-text-hover-colour: hsl(220, 14%, 43%);
+		--input-text-focus-colour: hsl(220, 14%, 43%);
+		--input-text-placeholder-colour: hsl(0, 0%, 70%);
+		--input-border-colour: hsl(0, 0%, 70%);
+		--input-border-hover-colour: hsl(0, 0%, 70%);
+
+		--modal-window-bg-colour: hsl(0, 0%, 100%);
+		--modal-window-border-colour: hsl(0, 0%, 70%);
+		--modal-header-text-colour: hsl(215, 55%, 21%);
+		--modal-header-text-hover-colour: hsl(215, 55%, 21%);
+		--modal-header-bg-colour: hsl(0, 0%, 100%);
+		--modal-header-border-colour: hsl(0, 0%, 70%);
+		--modal-header-button-colour: hsl(88, 75%, 20%);
+		--modal-header-button-hover-colour: hsl(88, 75%, 40%);
+		--modal-footer-bg-colour: hsl(0, 0%, 100%);
+		--modal-footer-border-colour: hsl(0, 0%, 100%);
+
+		--badge-price-bg-colour: hsl(0, 0%, 100%);
+		--badge-price-text-colour: hsl(88, 75%, 30%);
+
+		--footer-bg-colour: hsl(0, 0%, 90%);
+}
+
+/*@media (prefers-color-scheme: dark) {
+	:root {
+
+	}
+}*/
+
+/* Changes colours when button is pressed */
+.darkmode {
+		--window-bg-colour: hsl(216, 23%, 23%);
+
+		--font-h1-colour: hsl(222, 28%, 90%);
+		--font-h2-colour: hsl(222, 28%, 80%);
+		--font-h3-colour: hsl(222, 28%, 70%);
+		--font-h4-colour: hsl(222, 28%, 70%);
+		--font-h5-colour: hsl(222, 28%, 70%);
+		--font-h6-colour: hsl(222, 28%, 70%);
+		--font-paragraph-colour: hsl(215, 28%, 62%);
+		--font-link-colour: hsl(215, 28%, 62%);
+
+		--navigation-bg-colour: hsl(216, 23%, 23%);
+		--navigation-logo-colour: hsl(0, 0%, 100%);
+		--navigation-logo-hover-colour: hsl(0, 0%, 100%);
+		--navigation-link-colour: hsl(210, 24%, 84%);
+		--navigation-link-hover-colour: hsl(88, 75%, 40%);
+		--navigation-link-active-colour: hsl(88, 75%, 40%);
+		--navigation-link-focus-colour: hsl(88, 75%, 40%);
+		--navigation-link-selected-colour: hsl(215, 55%, 21%);
+
+		--button-primary-text-colour: hsl(88, 75%, 20%);
+		--button-primary-text-hover-colour: hsl(88, 75%, 20%);
+		--button-primary-text-focus-color: hsl(88, 75%, 20%);
+		--button-primary-text-disabled-color: hsl(216, 23%, 27%);
+		--button-primary-bg-colour: linear-gradient(92.88deg, hsl(88, 75%, 61%) 9.16%, hsl(88, 75%, 50%) 43.89%, hsl(88, 75%, 61%) 64.72%);
+		--button-primary-bg-hover-colour: linear-gradient(92.88deg, hsl(88, 75%, 61%) 9.16%, hsl(88, 75%, 50%) 43.89%, hsl(88, 75%, 61%) 64.72%);
+		--button-primary-bg-focus-colour: linear-gradient(92.88deg, hsl(88, 75%, 61%) 9.16%, hsl(88, 75%, 50%) 43.89%, hsl(88, 75%, 61%) 64.72%);
+		--button-primary-bg-disabled-colour: linear-gradient(92.88deg, hsl(216, 23%, 19%) 9.16%, hsl(216, 23%, 19%) 43.89%, hsl(216, 23%, 19%) 64.72%);
+		--button-primary-border-colour: hsl(216, 23%, 23%);
+		--button-primary-border-hover-colour: hsl(88, 75%, 61%);
+		--button-primary-border-focus-colour: hsl(88, 75%, 61%);
+		--button-primary-border-disabled-colour: hsl(216, 23%, 27%);
+		--button-secondary-text-colour: hsl(0, 0%, 100%);
+		--button-secondary-text-hover-colour: hsl(0, 0%, 100%);
+		--button-secondary-text-focus-colour: hsl(0, 0%, 100%);
+		--button-secondary-text-disabled-colour: hsl(216, 23%, 27%);
+		--button-secondary-bg-colour: hsl(216, 23%, 23%);
+		--button-secondary-bg-hover-colour: hsl(216, 23%, 23%);
+		--button-secondary-bg-focus-colour: hsl(216, 23%, 18%);
+		--button-secondary-bg-disabled-colour: hsl(216, 23%, 19%);
+		--button-secondary-border-colour: hsl(216, 23%, 43%);
+		--button-secondary-border-hover-colour: hsl(216, 23%, 43%);
+		--button-secondary-border-focus-colour: hsl(216, 23%, 43%);
+		--button-secondary-border-disabled-colour: hsl(216, 23%, 27%);
+		--button-tertiary-text-colour: hsl(88, 75%, 61%);
+		--button-tertiary-text-hover-colour: hsl(88, 75%, 61%);
+		--button-tertiary-text-focus-colour: hsl(88, 75%, 41%);
+		--button-tertiary-bg-colour: transparent;
+		--button-tertiary-bg-hover-colour: transparent;
+		--button-tertiary-bg-focus-colour: transparent;
+		--button-audio-text-colour: hsl(88, 75%, 20%);
+		--button-audio-text-hover-colour: hsl(88, 75%, 20%);
+		--button-audio-bg-colour: hsl(88, 75%, 61%);
+		--button-audio-bg-hover-colour: hsl(88, 75%, 61%);
+		--button-audio-shadow-colour: hsl(88, 75%, 31%);
+
+		--dropdown-menu-bg-colour: hsl(216, 23%, 33%);
+		--dropdown-menu-bg-hover-colour: hsl(216, 23%, 33%);
+		--dropdown-menu-bg-focus-colour: hsl(216, 23%, 33%);
+		--dropdown-menu-border-colour: hsl(216, 23%, 43%);
+		--dropdown-divider-colour: hsl(216, 23%, 43%);
+		--dropdown-item-bg-colour: transparent;
+		--dropdown-item-bg-hover-colour: hsl(88, 75%, 61%);
+		--dropdown-item-bg-focus-colour: hsl(88, 75%, 61%);
+		--dropdown-item-text-colour: hsl(234, 36%, 85%);
+		--dropdown-item-text-hover-colour: hsl(88, 75%, 20%);
+		--dropdown-item-text-focus-colour: hsl(88, 75%, 20%);
+
+		--scrollbar-bg-colour: hsl(216, 23%, 23%);
+		--scrollbar-bg-hover-colour: hsl(216, 23%, 30%);
+		--scrollbar-grab-colour: hsl(88, 75%, 61%);
+		--scrollbar-grab-hover-colour: hsl(88, 75%, 50%);
+
+		--hr-colour: hsl(216, 23%, 40%);
+		--hr-hover-colour: hsl(216, 23%, 40%);
+
+		--card-bg-colour: hsl(216, 23%, 27%);
+		--card-bg-hover-colour: hsl(216, 23%, 27%);
+		--card-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+		--column-bg-colour: hsl(216, 23%, 23%);
+
+		--input-bg-colour: hsl(216, 23%, 28%);
+		--input-bg-hover-colour: hsl(216, 23%, 33%);
+		--input-bg-focus-colour: hsl(216, 23%, 28%);
+		--input-text-colour: hsl(234, 36%, 85%);
+		--input-text-hover-colour: hsl(234, 36%, 85%);
+		--input-text-focus-colour: hsl(234, 36%, 85%);
+		--input-text-placeholder-colour: hsl(216, 23%, 43%);
+		--input-border-colour: hsl(216, 23%, 43%);
+		--input-border-hover-colour: hsl(216, 23%, 43%);
+
+		--modal-window-bg-colour: hsl(216, 23%, 23%);
+		--modal-window-border-colour: hsl(216, 23%, 43%);
+		--modal-header-text-colour: hsl(210, 24%, 84%);
+		--modal-header-text-hover-colour: hsl(210, 24%, 84%);
+		--modal-header-bg-colour: hsl(216, 23%, 23%);
+		--modal-header-border-colour: hsl(216, 23%, 43%);
+		--modal-header-button-colour: hsl(210, 24%, 84%);
+		--modal-header-button-hover-colour: hsl(88, 75%, 40%);
+		--modal-footer-bg-colour: hsl(216, 23%, 23%);
+		--modal-footer-border-colour: hsl(216, 23%, 23%);
+
+		--badge-price-bg-colour: hsl(216, 23%, 27%);
+		--badge-price-text-colour: hsl(88, 75%, 40%);
+
+		--footer-bg-colour: hsl(216, 23%, 13%);
+}

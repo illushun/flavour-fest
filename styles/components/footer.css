@@ -1,0 +1,29 @@
+.footer {
+	display: flex;
+	flex-direction: column-reverse;
+	
+	width: 100%;
+	
+	background-color: var(--footer-bg-colour);
+}
+
+.footer > .left,
+.footer > .right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+}
+
+.footer > .left {
+	padding: 40px;
+}
+
+.footer > .right {
+	padding: 20px;
+}
+
+.footer > .right img {
+	width: 100%;
+}

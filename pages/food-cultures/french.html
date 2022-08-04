@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <title>Flavour Fest | French</title>
+	
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<!-- CSS -->
+	  <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/a2ecd96a86.js" crossorigin="anonymous"></script>
+	</head>
+	
+	<body onload="loadPagination('menu-item')">
+		<!-- Navigation -->
+		<div class="nav-wrapper" id="navigation-style">
+			<nav class="navbar navbar-expand-sm">
+				<div class="container-fluid">
+					<!-- Logo -->
+					<div class="logo-container mobile-width-80">
+						<a href="../../">
+							<img class="logo-img" id="logo-img" src="../../assets/Logo.png" alt="Logo image" />
+						</a>
+					</div>
+
+					<!-- Hamburger menu for mobile -->
+					<div class="ms-auto">
+				    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+				      <span class="navbar-toggler-icon"></span>
+				    </button>
+					</div>
+	
+					<!-- Nav items -->
+					<div class="collapse navbar-collapse" id="navbar">
+						<ul class="navbar-nav me-auto ms-auto">
+			        <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">About</a>
+							  <ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" href="../../pages/flavour-fest.html">What is Flavour Fest?</a></li>
+									<li><hr class="dropdown-divider" /></li>
+							    <li><a class="dropdown-item mb-none" href="../../pages/explore.html">Explore</a></li>
+							  </ul>
+							</li>
+	
+							<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">Events</a>
+							  <ul class="dropdown-menu">
+									<li><a class="dropdown-item mb-none" href="../../pages/event-example.html">Coming Soon!</a></li>
+									<li><hr class="dropdown-divider" /></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/event-example.html">Event Example</a></li>
+							  </ul>
+							</li>
+	
+							<!-- Dropdown -->
+			        <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle mb-none" href="#" role="button" data-bs-toggle="dropdown">Food Cultures</a>
+							  <ul class="dropdown-menu">
+							    <li><a class="dropdown-item mb-none" href="./french.html">French</a></li>
+							    <li><a class="dropdown-item mb-none" href="../../pages/food-cultures/chinese.html">Chinese</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/japanese.html">Japanese</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/indian.html">Indian</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/italian.html">Italian</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/greek.html">Greek</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/spanish.html">Spanish</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/turkish.html">Turkish</a></li>
+									<li><a class="dropdown-item mb-none" href="../../pages/food-cultures/thai.html">Thai</a></li>
+							  </ul>
+							</li>
+							
+			        <li class="nav-item">
+			          <a class="nav-link mb-none" href="../../pages/lifestyle.html">Lifestyle</a>
+			        </li>
+							
+			      	<li class="nav-item hide-desktop">
+			          <div class="dropdown">
+								  <button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+								    <i class="fa-solid fa-gear"></i>
+								  </button>
+									
+								  <ul class="dropdown-menu">
+									  <li><a class="dropdown-item mb-none" id="theme-toggle-mobile">Toggle Theme</a></li>
+									  <li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+									</ul>
+								</div>
+			        </li>
+			      </ul>
+					</div>
+
+					<div class="push hide-mobile">
+						<div class="dropdown dropstart">
+							<button class="btn btn-secondary dropdown-toggle theme-switch settings-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							  <i class="fa-solid fa-gear"></i>
+							</button>
+								
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item mb-none" id="theme-toggle-desktop">Toggle Theme</a></li>
+								<li><a class="dropdown-item mb-none" data-bs-toggle="modal" data-bs-target="#settingsModal" onclick="loadSettings()">Settings</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<!-- Modal window for settings -->
+		<div class="modal" id="settingsModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <div class="modal-header">
+		        <h4 class="modal-title">Settings</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+
+		      <div class="modal-body">
+						<form>
+							<label><p class="mb-none">Primary Font Name</p></label>
+							<input class="form-control me-2 mb-20" id="font-name" type="text" placeholder="Font name...">
+
+							<label><p class="mb-none">Primary Font Link</p></label>
+							<input class="form-control me-2 mb-40" id="font-url" type="text" placeholder="Font link...">
+
+							<label><p class="mb-none">Secondary Font Name</p></label>
+							<input class="form-control me-2 mb-20" id="secondary-font-name" type="text" placeholder="Font name...">
+
+							<label><p class="mb-none">Secondary Font Link</p></label>
+							<input class="form-control me-2 mb-20" id="secondary-font-url" type="text" placeholder="Font link...">
+						</form>
+		      </div>
+
+		      <div class="modal-footer">
+						<button class="btn btn-tertiary push-right" type="button" onclick="resetSettings()">Reset</button>
+						
+						<button class="btn btn-primary bold" type="button" onclick="saveSettings()">Save</button>
+		        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+		      </div>
+		
+		    </div>
+		  </div>
+		</div>
+
+		<div class="top-btn btn-secondary" id="top" onclick="scrollToTop()">
+			<i class="fas fa-angle-up"></i>
+		</div>
+		
+		<div class="audio-btn" id="read-screen" onclick="togglePlayIcon()">
+			<i class="fa-solid fa-play" id="play-icon"></i>
+		</div>
+
+		<!-- Modal window for items -->
+		<div class="modal" id="itemModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="item-title">Title</h4>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+		      </div>
+
+		      <div class="modal-body">
+						<img class="item-image" src="#" alt="Menu item 1 image" loading="lazy" />
+						<img class="item-image" src="#" alt="Menu item 2 image" loading="lazy" />
+						<img class="item-image" src="#" alt="Menu item 3 image" loading="lazy" />
+						
+						<h3 class="mb-20">Description</h3>
+		        <p id="item-description">Text here...</p>
+
+						<h3 class="mb-20">Ingredients</h3>
+						<p id="item-ingredients">Text here...</p>
+		      </div>
+
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+		      </div>
+		
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Site content -->
+		<div class="page-container flex-column mt-60">
+			<div class="top">
+				<!-- Profile -->
+				<div class="img-display mt-60 mb-40">
+					<img src="../../assets/images/french/display.jpg" alt="French display image">		
+				</div>			
+			</div>
+
+			<!-- Food Items -->
+			<div class="middle">
+				<h3 class="mt-60 mb-40 bold">French Food Culture</h3>
+	
+				<p class="mb-60">
+					Like the majority of the world, the French enjoy three meals a day these include Breakfast, le petit déjeuner, lunch, le déjeuner (lunch), and le dîner (dinner).  Unlike countries such as the UK, Canada and the USA, the French actually savour and enjoy their meals, they don’t gulp down a Big Mac or eat at their desks. They are legally entitled to take a standard lunch break from 12-2 which is why you will find many a shop closed during these times.
+				</p>
+
+				<h3 class="mt-60 mb-40">Popular Foods</h3>
+				<p class="text-left mb-40" id="search-result"></p>
+
+				<div class="small-card-container mb-60">
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/french/tarte-tatin.jpg" alt="Tarte tatin" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Tarte Tatin</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/french/boeuf-bourguignon.jpg" alt="Boeuf bourguignon" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Boeuf Bourguignon</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/french/moules-marinieres.jpg" alt="Moules marinieres" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Moules Marinières</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/french/blanquette-de-veau.jpg" alt="Blanquette de veau" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Blanquette de Veau</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/french/steak-tartare.jpg" alt="Steak tartare" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Steak Tartare</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-medium">
+						<div class="card-left">
+							<img class="card-img tall-card" src="../../assets/images/french/cassoulet.jpg" alt="Cassoulet" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Cassoulet</h3>
+
+							<hr>
+
+							<div class="menu-tags">
+								<span class="badge bg-primary">Halal</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="mb-40">Difference Between Cafe and Restaurant</h3>
+	
+				<p class="mb-60">
+					In France, the main difference between cafe and restaurant is the level of formality. A cafe is usually casual, and it usually serves very simples dishes. I would say cafes are the most casual of French eateries (besides chains like Starbucks or McDonalds, which I’m not really including in this article). Restaurants are normally more formal, serving full dinner menus. The difference between restaurant and bistro is less drastic- a bistro is another casual restaurant, but you can expect slightly better food options here than at a cafe normally.
+				</p>
+	
+				<h3 class="mb-40">Bistro vs Brasserie</h3>
+	
+				<p class="mb-60">
+					So, now that you know what you can expect at cafes, restaurants, and bistros in France, what’s the difference between a bistro vs brasserie? A brasserie is a restaurant that serves simple, casual food, just like a bistro. The naming distinction between the two eateries mostly can be attributed to the days when brasseries served alcohol and bistros did not (but now, you’d be hard-pressed to find an eatery in France that didn’t serve alcohol). Food-wise, you can expect fairly similar menus, so there’s really not a huge difference between a bistro vs brasserie these days, but both are staples are French food culture!
+				</p>
+	
+				<h3 class="mb-40">French Markets</h3>
+	
+				<p>
+					Every French food journey begins at the market. Most cities and large towns feature a market at least twice a week, sometimes every day. Smaller towns and villages have a market once a week. Some of these markets date back for centuries: one, on the Ile de Ré in western France, boasts that the market has been in existence since the 14th century. In Paris, the Marché des Enfants Rouges dates from 1628.
+				</p>
+	
+				<p class="mb-60">
+					Naturally, people have their favorite markets and favorite vendors. It’s not unusual to see a long queue, some 15-people deep, for a certain fromagier (cheese-maker), while another cheese vendor a few stalls down has only a few customers. The French take quality very seriously. They scrutinize the offerings carefully and ask questions about their intended purchase before buying.
+				</p>
+	
+				<h3 class="mb-40">French Regional Foods</h3>
+	
+				<p class="mb-60">
+					To truly get to know “French food,” you have to know the regions. Despite the hoity-toity reputation that many French dishes have, most have humble origins – not created for kings, but for farmers and labourers. Now-famous regional specialties were largely based on the local products that were available at that time. That’s why you’ll find plenty of apple-based and dairy-heavy dishes in Normandy, a region rolling in apple orchards and dairy farms. In Provence, the cuisine features the olive oil that comes from the olive groves of the region.
+				</p>
+			</div>
+
+			<!-- Special -->
+			<div class="bottom">
+				<h3 class="mb-40">Other Cultures</h3>
+
+				<div class="large-card-container mb-60">
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/turkish.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/turkish/display.jpg" alt="Turkish culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">					
+							<h3 class="card-heading">Turkish</h3>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/french.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/french/display.jpg" alt="French culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">French</h3>
+						</div>
+					</div>
+
+					<div class="card-box-item mb-20 card-xl" onclick="location.href='../../pages/food-cultures/spanish.html'">
+						<div class="card-left">
+							<img class="card-img large-card" src="../../assets/images/spanish/display.jpg" alt="Spanish culture display image" loading="lazy" />
+						</div>
+	
+						<div class="card-right">
+							<h3 class="card-heading">Spanish</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer mt-60">
+				<div class="left">
+					<p>
+						Flavour fest is a month-long festival in June 2022 organised and funded by the Inclusive Economy Project and featuring many community-based events and activities in the Park and Warley area. Additionally, it ties in with the vision 2024 project which aims to celebrate diversity and culture in Calderdale maximising opportunities for local people to enjoy, learn and experience a larger life and promoting Park and Warley as a great place to live, work and visit
+					</p>
+				</div>
+
+				<div class="right">
+					<img id="logo-img" src="../../assets/Logo-white.png" alt="Logo image" />
+				</div>
+			</div>
+		
+	  <script src="../../scripts/script.js"></script>
+	</body>
+</html>

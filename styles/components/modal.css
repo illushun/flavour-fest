@@ -1,0 +1,51 @@
+/* Background of modal */
+.modal {
+	
+}
+
+/* Behind main modal screen */
+.modal-dialog {
+	background-color: transparent;
+}
+
+/* Main modal screen */
+.modal-content {
+	background-color: var(--modal-window-bg-colour);
+	border-color: var(--modal-window-border-colour);
+}
+
+.modal-header {
+	background-color: var(--modal-header-bg-colour);
+	border-color: var(--modal-header-border-colour);
+}
+
+.modal-header > .modal-title {
+	color: var(--modal-header-text-colour);
+}
+
+.modal-header > .btn-close {
+	color: var(--modal-header-button-colour);
+}
+
+.modal-body {
+
+}
+
+.modal-body img {
+	width: 50%;
+}
+
+.modal-footer {
+	background-color: var(--modal-footer-bg-colour);
+	border-color: var(--modal-footer-border-colour);
+}
+
+/* Different states */
+
+.modal-header > .modal-title:hover {
+	color: var(--modal-header-text-hover-colour);
+}
+
+.modal-header > .btn-close:hover {
+	color: var(--modal-header-button-hover-colour);
+}

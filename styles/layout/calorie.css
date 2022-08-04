@@ -1,0 +1,11 @@
+.calorie-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-direction: column;
+}
+
+.calorie-form > .dropdown {
+
+}

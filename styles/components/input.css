@@ -1,0 +1,39 @@
+.form-control {
+	color: var(--input-text-colour);
+	border: 1px solid var(--input-border-colour);
+	background-color: var(--input-bg-colour);
+}
+
+*::-webkit-input-placeholder {
+    color: var(--input-text-placeholder-colour) !important;
+}
+*:-moz-placeholder {
+    color: var(--input-text-placeholder-colour) !important;
+    opacity: 1 !important;
+}
+*::-moz-placeholder {
+    color: var(--input-text-placeholder-colour) !important;
+    opacity: 1 !important;
+}
+*:-ms-input-placeholder {
+    color: var(--input-text-placeholder-colour) !important;
+}
+*::-ms-input-placeholder {
+    color: var(--input-text-placeholder-colour) !important;
+}
+*::placeholder {
+    color: var(--input-text-placeholder-colour) !important;
+}
+
+/* Different states */
+
+.form-control:hover {
+	color: var(--input-text-hover-colour);
+	border: 1px solid var(--input-border-hover-colour);
+	background-color: var(--input-bg-hover-colour);
+}
+
+.form-control:focus {
+	color: var(--input-text-focus-colour);
+	background-color: var(--input-bg-focus-colour);
+}

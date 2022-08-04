@@ -1,0 +1,40 @@
+.badge {
+	display: flex;
+}
+
+.badge-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.badge-default {
+	color: #929DAA;
+}
+
+.badge-price {
+	color: var(--badge-price-text-colour);
+	background-color: var(--badge-price-bg-colour);
+}
+
+.badge-primary {
+	color: white;
+	background-color: #0061FF;
+}
+
+.badge-special {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	background-color: hsl(0, 100%, 65%);
+}
+
+.badge-special > .left {
+	text-align: center;
+	width: 10%;
+}
+
+.badge-special > .right {
+	text-align: left;
+	width: auto;
+}

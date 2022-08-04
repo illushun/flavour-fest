@@ -1,0 +1,85 @@
+.btn {
+	display: block; 
+
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	
+	border-radius: var(--corner-rounding);
+}
+.btn-primary {
+	background-image: var(--button-primary-bg-colour);
+	
+  transition: 0.5s;
+  background-size: 200% auto;
+
+	border: 1px solid var(--button-primary-border-colour);
+	color: var(--button-primary-text-colour);
+}
+
+.btn-secondary {
+	border: 2px solid var(--button-secondary-border-colour);
+	
+	color: var(--button-secondary-text-colour);
+	background-color: var(--button-secondary-bg-colour);
+}
+
+.btn-tertiary {
+	border: none;
+	
+	color: var(--button-tertiary-text-colour);
+	background-color: var(--button-tertiary-bg-colour);
+}
+
+/* Different states */
+
+.btn-primary:hover {
+	/* change the direction of the change here */
+	background-position: right center;
+	background-image: var(--button-primary-bg-hover-colour);
+
+	color: var(--button-primary-text-hover-colour);
+	border-color:var(--button-primary-border-hover-colour);
+}
+
+.btn-primary:focus {
+	background-position: right center;
+	background-image: var(--button-primary-bg-focus-colour);
+
+	color: var(--button-primary-text-focus-colour);
+	border-color: var(--button-primary-border-focus-colour);
+}
+
+.btn-primary:disabled {
+	background-image: var(--button-primary-bg-disabled-colour);
+
+	color: var(--button-primary-text-disabled-color);
+	border-color: var(--button-primary-border-disabled-colour);
+}
+
+.btn-secondary:hover {
+	color: var(--button-secondary-text-hover-colour);
+	border-color: var(--button-secondary-border-hover-colour);
+	background-color: var(--button-secondary-bg-hover-colour);
+}
+
+.btn-secondary:focus {
+	color: var(--button-secondary-text-focus-colour);
+	border-color: var(--button-secondary-border-focus-colour);
+	background-color: var(--button-secondary-bg-focus-colour);
+}
+
+.btn-secondary:disabled {
+	color: var(--button-secondary-text-disabled-colour);
+	border-color: var(--button-secondary-border-disabled-colour);
+	background-color: var(--button-secondary-bg-disabled-colour);
+}
+
+.btn-tertiary:hover {
+	color: var(--button-tertiary-text-hover-colour);
+	background-color: var(--button-tertiary-bg-hover-colour);
+}
+
+.btn-tertiary:focus {
+	color: var(--button-tertiary-text-focus-colour);
+	background-color: var(--button-tertiary-bg-focus-colour);
+}

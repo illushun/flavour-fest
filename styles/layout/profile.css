@@ -1,0 +1,36 @@
+.profile-container {
+	overflow: hidden;
+	
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	width: 100%;
+
+	border-radius: var(--corner-rounding);
+	border: 1px solid #E6E9EE;
+	background-color: white;
+}
+
+.profile-container > .left,
+.profile-container > .right {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	
+	padding: 2em;
+	width: 100%;
+}
+
+.profile-container > .left {
+	border-bottom: 2px solid #E6E9EE;
+}
+
+.profile-container > .right {
+	
+}
+
+.profile-container > .left img {
+	width: 50%;
+}

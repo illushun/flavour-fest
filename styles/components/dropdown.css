@@ -1,0 +1,68 @@
+.dropdown-menu {
+	background-color: var(--dropdown-menu-bg-colour);
+	border: 1px solid var(--dropdown-menu-border-colour);
+
+	max-height: 250px;
+	overflow: auto;
+	
+	padding: 0;
+}
+
+.dropdown-item {
+	color: var(--dropdown-item-text-colour);
+	background-color: var(--dropdown-item-bg-colour);
+
+	padding: 16px;
+}
+
+.dropdown-divider {
+	border: 1px solid var(--dropdown-divider-colour);
+	
+	width: 85%;
+	margin: 0 auto;
+}
+
+.active-item {
+	color: var(--dropdown-item-text-active-colour);
+	background-color: var(--dropdown-item-bg-active-colour);
+}
+
+.settings-dropdown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 40px;
+	height: 40px;
+}
+
+
+/* Different states */
+
+.dropdown-menu:hover {
+	background-color: var(--dropdown-menu-bg-hover-colour);
+}
+
+.dropdown-menu:focus {
+	background-color: var(--dropdown-menu-bg-focus-colour);
+}
+
+.dropdown-item:hover {
+	color: var(--dropdown-item-text-hover-colour);
+	background-color: var(--dropdown-item-bg-hover-colour);
+}
+
+.dropdown-item:focus {
+	color: var(--dropdown-item-text-focus-colour);
+	background-color: var(--dropdown-item-bg-focus-colour);
+}
+
+.dropdown-divider:hover {
+	border: 1px solid var(--dropdown-divider-colour);
+}
+
+
+.active-item:hover {
+	color: var(--dropdown-item-text-active-hover-colour);
+	background-color: var(--dropdown-item-bg-active-hover-colour);
+}
